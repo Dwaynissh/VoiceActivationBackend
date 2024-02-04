@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <section
+      style="
+        height: 500px;
+        width: 750px;
+        border: 1px solid black;
+        display: flex;
+        justify-content: center;
+        align-items: end;
+        flex-direction: column;
+      "
+    >
+      <div
+        style="
+          width: 100%;
+          text-align: center;
+          font-weight: bold;
+          font-size: 30px;
+          color: rgb(5, 5, 119);
+        "
+      >
+        Hello <%= data.email %>!
+      </div>
+      <div
+        style="
+          height: 80%;
+          width: 100%;
+          border-top: 1px solid black;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+        "
+      >
+        <h2>You are Welcome to our Email Service!</h2>
+        <h3>Below is your verification token</h3>
+        <div
+          style="
+            height: 70px;
+            min-width: 150px;
+            border: 1px solid blue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: rgb(5, 5, 119);
+            font-weight: bold;
+          "
+        >
+          <%= data.token %>
+        </div>
+        <h3>Now that you've gotten your token,</h3>
+        <button
+          style="
+            background-color: rgb(54, 54, 214);
+            font-weight: bold;
+            height: 50px;
+            width: 120px;
+            border-radius: 15px;
+          "
+        >
+          <a
+            style="color: white; text-decoration: none; cursor: pointer"
+            href="<%= data.url %>"
+            >Verify Here</a
+          >
+        </button>
+      </div>
+    </section>
+  </body>
+</html>
